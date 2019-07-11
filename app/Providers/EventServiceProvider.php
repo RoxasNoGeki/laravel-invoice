@@ -2,10 +2,19 @@
 
 namespace App\Providers;
 
+
 use Illuminate\Support\Facades\Event;
 use App\Events\User\Registering;
+use App\Events\User\Saving;
+use App\Events\User\Authenticating;
+
 use App\Listeners\SetUUID;
+use App\Listeners\CheckIfUserIDExists;
+use App\Listeners\DenyIfNotVerified;
+
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+
+
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -17,6 +26,12 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         Registering::class => [
             SetUUID::class,
+        ],
+        Saving::class =>[
+            CheckIfUserIDExists::class,
+        ],
+        Authenticating::class => [
+            DenyIfNotVerified::class,
         ],
     ];
 

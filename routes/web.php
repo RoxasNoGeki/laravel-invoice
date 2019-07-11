@@ -22,9 +22,16 @@ Route::post('/signingin','AuthController@signingin')->name('signingin');
 Route::get('/signout','AuthController@signout')->name('signout');
 Route::get('/verify/{username}','AuthController@verify')->name('verify');
 Route::post('/verifying','AuthController@verifying')->name('verifying');
+Route::post('/resetingpw','AuthController@resetingpw')->name('resetingpw');
 
 
 Route::namespace('rein')->middleware('can:logged')->group( function () {
+    Route::get('/changepw','DashboardController@changepw')->name('changepw');
+    Route::patch('/changingpw','DashboardController@changingpw')->name('changingpw');
     Route::get('/dashboard','DashboardController@index')->name('dashboard');
+    Route::get('/invoice','DashboardController@invoice')->name('invoice');
+    Route::get('/form','DashboardController@form')->name('form');
+    Route::get('/advance','DashboardController@advance')->name('advance');
+
 });
 

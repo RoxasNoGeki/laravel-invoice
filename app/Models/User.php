@@ -12,6 +12,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Validation\ValidationException;
 
 use App\Events\User\Registering;
+use App\Events\User\Saving;
+use App\Events\User\Authenticating;
 use Carbon\Carbon;
 //use Tymon\JWTAuth\Contracts\JWTSubject;
 
@@ -47,6 +49,7 @@ class User extends Authenticatable
 
 	protected $dispatchesEvents = [
         'creating' 	=> Registering::class,
+        'saving'    => Saving::class,
     ];
 
     protected $observables = [
@@ -127,10 +130,12 @@ class User extends Authenticatable
 
     public function authenticate($password)
     {
+        event(new Authenticating($this));
        if(!app('hash')->check($password, $this->password)) {
             throw ValidationException::withMessages(['password' => ['mismatch']]);
         }
     }
+
 	// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	// ACCESSOR
 	// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -86,20 +86,20 @@
         recaptchaVerifier.render().then(function (widgetId) {
             window.recaptchaWidgetId = widgetId;
         });
-        // auto click send sms after 1s
-        setTimeout(firstload, 1000);
+
     };
 
-    function firstload(){
-        $('#sign-in-button').click();
-    }
 
     //membuat button disabled untuk 30s
     $fewSeconds = 30;
     $('#test-sign-in-button').click(function () {
         var btn = $(this);
         var spn = $('#time-message');
+        var btn1= $('#verify-code-button');
+        var frm= $('#verification-code');
         btn.prop('disabled', true);
+        btn1.prop('disabled', false);
+        frm.prop('disabled', false);
         setTimeout(function () {
             btn.prop('disabled', false);
         }, $fewSeconds * 1000);
