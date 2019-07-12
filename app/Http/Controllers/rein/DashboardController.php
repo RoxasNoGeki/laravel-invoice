@@ -28,6 +28,11 @@ class DashboardController extends Controller
         return view('rein.pages.dashboard.advance');
     }
 
+    public function test(Request $request){
+        $data=$request->only(['username']);
+        return str_replace('-','',$data);
+    }
+
     public function changingpw(Request $request){
         $data   = $request->only(['password']);
         $user   = User::where('username',Auth::user()->username)->first();
@@ -39,6 +44,11 @@ class DashboardController extends Controller
         }
         Auth::logout();
         return redirect(route('signin'))->with('status','Your Password Has Been Changed');
+    }
+    public function logout()
+    {
+        Auth::logout();
+        return redirect(route('signin'));
     }
 
 }

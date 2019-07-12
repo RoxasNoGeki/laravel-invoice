@@ -22,7 +22,7 @@
                     <form method="POST" action="{{route('signingup')}}">
                         @csrf
                         <input type="text" placeholder="Your Name" class="form-control" name="name" >
-                        <input type="text" placeholder="Phone Number" class="form-control" name="username" id="phone" >
+                        <input type="text" placeholder="Phone Number" class="form-control" name="username" id="phone" data-inputmask="'mask': '+99-999-9999-9999'" >
                         <input type="password" placeholder="Password" class="form-control" name="password" >
                           <button class="btn btn-primary" type="submit">Register Now</button>
                         <div>Sign up already? <a href="{{route('signin')}}"> SignIn</a></div>

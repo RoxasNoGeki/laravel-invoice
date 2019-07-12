@@ -55,7 +55,29 @@
 <script src="{{url('/assets/js/jquery-2.2.4.min.js')}}"></script>
 <script src="{{url('/assets/js/plugins.js')}}"></script>
 <script src="{{url('/assets/js/functions.js')}}"></script>
+<!-- jquery.inputmask -->
+<script src="{{url('/vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js')}}"></script>
+
 </body>
+
+<script>
+    /* INPUT MASK */
+
+    function init_InputMask() {
+
+        if( typeof ($.fn.inputmask) === 'undefined'){ return; }
+        console.log('init_InputMask');
+
+        $(":input").inputmask();
+
+    }
+    $(document).ready(function() {
+        init_InputMask();
+    });
+
+</script>
+
+
 
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
 <script type="text/javascript">

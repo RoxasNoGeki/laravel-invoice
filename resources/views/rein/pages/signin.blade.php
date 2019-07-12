@@ -19,7 +19,7 @@
                     @include('rein.components.error')
                     <form method="POST" action="{{route('signingin')}}">
                         @csrf
-                        <input type="text" placeholder="Phone Number" class="form-control" name="username" id="phone" >
+                        <input type="text" placeholder="Phone Number" class="form-control" name="username" id="phone" data-inputmask="'mask': '+99-999-9999-9999'" >
                         <input type="password" placeholder="Password" class="form-control" name="password" >
                         <button class="btn btn-primary" type="submit">Register Now</button>
                         <div>Sign up already? <a href="{{route('signup')}}"> SignUp</a></div>

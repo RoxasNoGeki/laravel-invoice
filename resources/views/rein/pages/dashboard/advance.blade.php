@@ -49,8 +49,8 @@
                         </div>
                         <div class="x_content">
                             <br/>
-                            <form class="form-horizontal form-label-left">
-
+                            <form class="form-horizontal form-label-left" method="POST" action="{{route('test')}}">
+                                @csrf
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-3">Date Mask</label>
                                     <div class="col-md-9 col-sm-9 col-xs-9">
@@ -69,7 +69,7 @@
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-3">Custom Mask</label>
                                     <div class="col-md-9 col-sm-9 col-xs-9">
-                                        <input type="text" class="form-control" data-inputmask="'mask': '99-999999'">
+                                        <input type="text" class="form-control" name="username" data-inputmask="'mask': '+99-999999'">
                                         <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
                                     </div>
                                 </div>

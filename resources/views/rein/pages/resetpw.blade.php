@@ -19,7 +19,7 @@
                     @include('rein.components.error')
                     <form method="POST" action="{{route('resetingpw')}}">
                         @csrf
-                        <input type="text"  class="form-control" name="username" placeholder="Your Username" required />
+                        <input type="text"  class="form-control" name="username" placeholder="Your Username" data-inputmask="'mask': '+99-999-9999-9999'" required />
                         <button class="btn btn-primary" type="submit">Submit</button>
                         <div>Go back? <a href="{{route('signin')}}"> SignIn</a></div>
                     </form>

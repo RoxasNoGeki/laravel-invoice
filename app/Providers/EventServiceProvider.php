@@ -27,9 +27,6 @@ class EventServiceProvider extends ServiceProvider
         Registering::class => [
             SetUUID::class,
         ],
-        Saving::class =>[
-            CheckIfUserIDExists::class,
-        ],
         Authenticating::class => [
             DenyIfNotVerified::class,
         ],
