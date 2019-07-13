@@ -153,7 +153,7 @@
                                         <img src="{{url('/production/images/visa.png')}}" alt="Visa">
                                         <img src="{{url('/production/images/mastercard.png')}}" alt="Mastercard">
                                         <img src="{{url('/production/images/american-express.png')}}" alt="American Express">
-                                        <img src="{{url('/production/images/paypal.png" alt="Paypal')}}">
+                                        <img src="{{url('/production/images/paypal.png' )}}"alt="Paypal">
                                         <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
                                             Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
                                         </p>

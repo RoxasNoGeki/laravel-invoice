@@ -33,6 +33,8 @@ Route::namespace('rein')->middleware('can:logged')->group( function () {
     Route::get('/advance','DashboardController@advance')->name('advance');
     Route::post('/test','DashboardController@test')->name('test');
     Route::get('/logout','DashboardController@logout')->name('logout');
+    Route::get('/tables','DashboardController@tables')->name('tables');
+    Route::get('/Dtables','DashboardController@Dtables')->name('Dtables');
 
 });
 

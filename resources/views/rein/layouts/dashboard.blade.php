@@ -25,10 +25,12 @@
     <link href="{{url('/vendors/select2/dist/css/select2.min.css')}}" rel="stylesheet">
     <!-- Switchery -->
     <link href="{{url('/vendors/switchery/dist/switchery.min.css')}}" rel="stylesheet">
-    <!-- starrr -->
-    <link href="{{url('/vendors/starrr/dist/starrr.css')}}" rel="stylesheet">
-    <!-- bootstrap-daterangepicker -->
-    <link href="{{url('/vendors/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="{{url('/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url('/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url('/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url('/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url('/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css')}}" rel="stylesheet">
 
 
     <!-- Custom Theme Style -->
@@ -62,6 +64,12 @@
                                 <ul class="nav child_menu">
                                     <li><a href="{{route('form')}}">General Form</a></li>
                                     <li><a href="{{route('advance')}}">Advanced Components</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="{{route('tables')}}">Tables</a></li>
+                                    <li><a href="{{route('Dtables')}}">Table Dynamic</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-desktop"></i> UI Elements <span
@@ -136,9 +144,6 @@
 <script src="{{url('/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js')}}"></script>
 <!-- iCheck -->
 <script src="{{url('/vendors/iCheck/icheck.min.js')}}"></script>
-<!-- bootstrap-daterangepicker -->
-<script src="{{url('/vendors/moment/min/moment.min.js')}}"></script>
-<script src="{{url('/vendors/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
 <!-- bootstrap-wysiwyg -->
 <script src="{{url('/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js')}}"></script>
 <script src="{{url('/vendors/jquery.hotkeys/jquery.hotkeys.js')}}"></script>
@@ -155,46 +160,28 @@
 <script src="{{url('/vendors/autosize/dist/autosize.min.js')}}"></script>
 <!-- jQuery autocomplete -->
 <script src="{{url('/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js')}}"></script>
-<!-- starrr -->
-<script src="{{url('/vendors/starrr/dist/starrr.js')}}"></script>
 <!-- jquery.inputmask -->
 <script src="{{url('/vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js')}}"></script>
-
+<!-- Datatables -->
+<script src="{{url('/vendors/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{url('/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
+<script src="{{url('/vendors/datatables.net-buttons/js/dataTables.buttons.min.js')}}"></script>
+<script src="{{url('/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js')}}"></script>
+<script src="{{url('/vendors/datatables.net-buttons/js/buttons.flash.min.js')}}"></script>
+<script src="{{url('/vendors/datatables.net-buttons/js/buttons.html5.min.js')}}"></script>
+<script src="{{url('/vendors/datatables.net-buttons/js/buttons.print.min.js')}}"></script>
+<script src="{{url('/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js')}}"></script>
+<script src="{{url('/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js')}}"></script>
+<script src="{{url('/vendors/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
+<script src="{{url('/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js')}}"></script>
+<script src="{{url('/vendors/datatables.net-scroller/js/dataTables.scroller.min.js')}}"></script>
+<script src="{{url('/vendors/jszip/dist/jszip.min.js')}}"></script>
+<script src="{{url('/vendors/pdfmake/build/pdfmake.min.js')}}"></script>
+<script src="{{url('/vendors/pdfmake/build/vfs_fonts.js')}}"></script>
 
 
 <!-- Custom Theme Scripts -->
 <script src="{{url('/build/js/custom.min.js')}}"></script>
-<!-- Initialize datetimepicker -->
-<script>
-    $('#myDatepicker').datetimepicker();
-
-    $('#myDatepicker2').datetimepicker({
-        format: 'DD.MM.YYYY'
-    });
-
-    $('#myDatepicker3').datetimepicker({
-        format: 'hh:mm A'
-    });
-
-    $('#myDatepicker4').datetimepicker({
-        ignoreReadonly: true,
-        allowInputToggle: true
-    });
-
-    $('#datetimepicker6').datetimepicker();
-
-    $('#datetimepicker7').datetimepicker({
-        useCurrent: false
-    });
-
-    $("#datetimepicker6").on("dp.change", function(e) {
-        $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-    });
-
-    $("#datetimepicker7").on("dp.change", function(e) {
-        $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-    });
-</script>
 
 
 
