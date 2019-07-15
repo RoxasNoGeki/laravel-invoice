@@ -2,45 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1078b19a-a426-4915-971a-d0cd2cdd3879" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_organizations_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_plans_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_organizations_detail_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_prices_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2018_03_19_000000_create_invoice_product_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2018_03_19_000000_create_invoice_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_05_01_074036_create_subscriptions_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/rein/pages/dashboard/tables.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/rein/pages/dashboard/tables_dynamic.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/rein/InvoiceController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/History.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Plan.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Price.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Subscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Template.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_invoice_template_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/rein/pages/dashboard/form.wizard.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/rein/pages/invoice/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/rein/pages/invoice/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/rein/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/rein/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/bootstrap-daterangepicker/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/bootstrap-daterangepicker/daterangepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/bootstrap-daterangepicker/daterangepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/bootstrap-daterangepicker/demo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/bootstrap-daterangepicker/drp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/bootstrap-daterangepicker/example/amd/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/bootstrap-daterangepicker/example/amd/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/bootstrap-daterangepicker/example/amd/require.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/bootstrap-daterangepicker/example/browserify/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/bootstrap-daterangepicker/example/browserify/bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/bootstrap-daterangepicker/example/browserify/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/bootstrap-daterangepicker/example/browserify/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/bootstrap-daterangepicker/package.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/bootstrap-daterangepicker/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/bootstrap-daterangepicker/website/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/bootstrap-daterangepicker/website/website.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/bootstrap-daterangepicker/website/website.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/starrr/Gruntfile.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/starrr/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/starrr/dist/starrr.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/starrr/dist/starrr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/starrr/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/starrr/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/starrr/src/starrr.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/starrr/src/starrr.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_organizations_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_organizations_detail_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_invoice_history_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_03_19_000000_create_invoice_product_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_03_19_000000_create_invoice_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/rein/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rein/layouts/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/rein/pages/dashboard/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rein/pages/dashboard/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/rein/pages/dashboard/invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rein/pages/dashboard/invoice.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/rein/pages/dashboard/form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/rein/pages/dashboard/invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rein/pages/invoice/invoice.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/rein/pages/signin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rein/pages/signin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,26 +41,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="36" column="74" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/dashboard/tables_dynamic.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="56" column="44" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
+            <state relative-caret-position="138">
+              <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/rein/layouts/dashboard.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/rein/InvoiceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1912">
-              <caret line="168" column="60" selection-start-line="168" selection-start-column="60" selection-end-line="168" selection-end-column="60" />
+            <state relative-caret-position="163">
+              <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+              <folding>
+                <element signature="e#44#72#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/invoice/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -88,8 +72,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>register</find>
-      <find>form-control</find>
       <find>.form-control</find>
       <find>hero</find>
       <find>hero-form</find>
@@ -112,7 +94,18 @@
       <find>starr</find>
       <find>star</find>
       <find>../</find>
+      <find>wizard</find>
+      <find>input</find>
+      <find>parsley</find>
+      <find>demo-form</find>
+      <find>subscriber</find>
+      <find>submit</find>
+      <find>middle</find>
+      <find>Mark</find>
     </findStrings>
+    <dirStrings>
+      <dir>C:\Users\roxas\Documents\ThunderLabs\Vernon Project\laravel\blog</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -120,13 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/auth.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-        <option value="$PROJECT_DIR$/resources/views/rein/layouts/rein.blade.php" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/storage/framework/views/ab34ef475fafc08a92eeca1cce2d7bba5dde7631.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
-        <option value="$PROJECT_DIR$/app/Models/Traits/JWTTrait.php" />
         <option value="$PROJECT_DIR$/app/Models/Traits/Authorizable.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/rein/Controller.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/rein/TestController.php" />
@@ -152,19 +138,32 @@
         <option value="$PROJECT_DIR$/app/Listeners/CheckIfUserIDExists.php" />
         <option value="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" />
-        <option value="$PROJECT_DIR$/resources/views/rein/pages/signin.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/rein/pages/signup.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/rein/pages/resetpw.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/rein/pages/dashboard/form.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/rein/pages/dashboard/invoice.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_organizations_detail_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_03_19_000000_create_invoice_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_03_19_000000_create_invoice_product_table.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/rein/pages/dashboard/tables.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/rein/pages/dashboard/tables_dynamic.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_01_074036_create_subscriptions_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_organizations_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_organizations_detail_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_invoice_template.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_invoice_history_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_invoice_template_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/rein/pages/signin.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/rein/pages/dashboard/form.wizard.blade.php" />
+        <option value="$PROJECT_DIR$/app/Models/Subscription.php" />
+        <option value="$PROJECT_DIR$/app/Models/Price.php" />
+        <option value="$PROJECT_DIR$/app/Models/Plan.php" />
+        <option value="$PROJECT_DIR$/app/Models/History.php" />
+        <option value="$PROJECT_DIR$/app/Models/Template.php" />
+        <option value="$PROJECT_DIR$/resources/views/rein/pages/dashboard/form.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/rein/DashboardController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/rein/layouts/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/rein/InvoiceController.php" />
+        <option value="$PROJECT_DIR$/resources/views/rein/pages/invoice/index.blade.php" />
       </list>
     </option>
   </component>
@@ -257,10 +256,10 @@
       <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="68" />
-    <option name="y" value="61" />
-    <option name="width" value="697" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="351" />
+    <option name="y" value="30" />
+    <option name="width" value="984" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectView">
@@ -268,8 +267,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -281,6 +278,19 @@
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Events" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Events" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
@@ -306,13 +316,14 @@
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Listeners" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
@@ -360,12 +371,23 @@
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="rein" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="invoice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -373,7 +395,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/rein/pages/dashboard" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Models" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -381,15 +403,16 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\roxas\Documents\ThunderLabs\Vernon Project\laravel\blog\app\Http\Controllers" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\roxas\Documents\ThunderLabs\Vernon Project\laravel\blog\app\Models" />
       <recent name="C:\Users\roxas\Documents\ThunderLabs\Vernon Project\laravel\blog\resources\views\rein\pages\dashboard" />
       <recent name="C:\Users\roxas\Documents\ThunderLabs\Vernon Project\laravel\blog\database\migrations" />
       <recent name="C:\Users\roxas\Documents\ThunderLabs\Vernon Project\laravel\blog\app\Events\User" />
       <recent name="C:\Users\roxas\Documents\ThunderLabs\Vernon Project\laravel\blog\app\Listeners" />
-      <recent name="C:\Users\roxas\Documents\ThunderLabs\Vernon Project\laravel\blog\resources\views\rein\pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\roxas\Documents\ThunderLabs\Vernon Project\laravel\blog\resources\views\rein\pages\invoice" />
+      <recent name="C:\Users\roxas\Documents\ThunderLabs\Vernon Project\laravel\blog\app\Http\Controllers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -423,18 +446,19 @@
       <workItem from="1562733802796" duration="14918000" />
       <workItem from="1562806706579" duration="20871000" />
       <workItem from="1562893655899" duration="9641000" />
-      <workItem from="1562978407424" duration="6166000" />
+      <workItem from="1562978407424" duration="9264000" />
+      <workItem from="1563157089040" duration="21545000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51596000" />
+    <option name="totallyTimeSpent" value="76239000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18381241" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22314675" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -453,8 +477,8 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3289689" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -502,113 +526,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Providers/TestServiceProvider.php" />
-    <entry file="file://$PROJECT_DIR$/app/Providers/AuthServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="e#33#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Policies/AuthorizationPolicy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-          <folding>
-            <element signature="e#32#41#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#33#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/ReinServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <element signature="e#135#174#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4400">
-          <caret line="176" column="49" selection-start-line="176" selection-start-column="49" selection-end-line="176" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34550">
-          <caret line="1382" column="1" selection-start-line="1382" selection-start-column="1" selection-end-line="1382" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/RouteServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Events/User/Authenticating.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Listeners/DenyIfNotVerified.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rein/components/error.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Events/User/Saving.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Events/User/Base.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-          <folding>
-            <element signature="e#137#175#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/dashboard.blade.php" />
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -635,41 +552,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/changepw.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="22" column="88" lean-forward="true" selection-start-line="22" selection-start-column="88" selection-end-line="22" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
-          <folding>
-            <element signature="e#449#500#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Events/User/Registering.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Listeners/SetUUID.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Listeners/CheckIfUserIDExists.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -704,23 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="e#40#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/signin.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" column="143" selection-start-line="21" selection-start-column="143" selection-end-line="21" selection-end-column="160" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/dashboard/advance.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="875">
@@ -732,37 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/dashboard/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/resetpw.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" column="151" selection-start-line="21" selection-start-column="151" selection-end-line="21" selection-end-column="151" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_plans_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding>
-            <element signature="e#7#45#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_01_074036_create_subscriptions_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -780,27 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/dashboard/form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="186" column="26" selection-start-line="186" selection-start-column="26" selection-end-line="186" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_organizations_detail_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_organizations_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_19_000000_create_invoice_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -815,24 +632,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="36" column="74" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/dashboard/tables.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-301">
-          <caret line="722" column="30" lean-forward="true" selection-start-line="269" selection-start-column="8" selection-end-line="722" selection-end-column="30" />
-          <folding>
-            <element signature="n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/dashboard/invoice.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/dashboard/tables.html" />
+    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/invoice/invoice.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
@@ -852,39 +653,251 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/rein/DashboardController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/dashboard/tables_dynamic.html" />
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_plans_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+        <state relative-caret-position="128">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
           <folding>
-            <element signature="e#44#72#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rein/layouts/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1912">
-          <caret line="168" column="60" selection-start-line="168" selection-start-column="60" selection-end-line="168" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/dashboard/tables_dynamic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="3700" column="65" selection-start-line="3685" selection-start-column="4" selection-end-line="3700" selection-end-column="65" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#7#45#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/dashboard/tables_dynamic.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="120">
           <caret line="56" column="44" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_01_074036_create_subscriptions_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="21" column="36" lean-forward="true" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_auth_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_invoice_history_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_invoice_template_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#7#45#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/resetpw.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="21" column="151" selection-start-line="21" selection-start-column="151" selection-end-line="21" selection-end-column="151" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/changepw.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/dashboard/form.wizard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4450">
+          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/EventServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2300">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Subscriber.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Subscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
+          <folding>
+            <element signature="e#471#510#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Plan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="15" column="1" lean-forward="true" selection-end-line="111" />
+          <folding>
+            <element signature="e#471#510#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Price.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1812">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+          <folding>
+            <element signature="e#471#510#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/signin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Listeners/CheckIfUserIDExists.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="30" column="41" lean-forward="true" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Listeners/SetUUID.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2980">
+          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+          <folding>
+            <element signature="e#449#500#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/History.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/rein/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding>
+            <element signature="e#40#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/build/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="1830" column="21" selection-start-line="1830" selection-start-column="15" selection-end-line="1830" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+          <folding>
+            <element signature="e#449#488#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rein/layouts/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="77" column="71" selection-start-line="77" selection-start-column="71" selection-end-line="77" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/rein/DashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="12" column="50" lean-forward="true" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+          <folding>
+            <element signature="e#44#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/dashboard/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/invoice/form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/rein/InvoiceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <folding>
+            <element signature="e#44#72#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rein/pages/invoice/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
         </state>
       </provider>
     </entry>

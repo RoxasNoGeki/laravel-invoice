@@ -25,16 +25,16 @@ Route::post('/resetingpw','AuthController@resetingpw')->name('resetingpw');
 
 
 Route::namespace('rein')->middleware('can:logged')->group( function () {
+    Route::resource('/invoice','InvoiceController');
     Route::get('/changepw','DashboardController@changepw')->name('changepw');
     Route::patch('/changingpw','DashboardController@changingpw')->name('changingpw');
     Route::get('/dashboard','DashboardController@index')->name('dashboard');
-    Route::get('/invoice','DashboardController@invoice')->name('invoice');
-    Route::get('/form','DashboardController@form')->name('form');
     Route::get('/advance','DashboardController@advance')->name('advance');
     Route::post('/test','DashboardController@test')->name('test');
     Route::get('/logout','DashboardController@logout')->name('logout');
     Route::get('/tables','DashboardController@tables')->name('tables');
     Route::get('/Dtables','DashboardController@Dtables')->name('Dtables');
+    Route::post('/setting','DashboardController@setting')->name('setting');
 
 });
 

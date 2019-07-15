@@ -21,7 +21,7 @@
                         @csrf
                         <input type="text" placeholder="Phone Number" class="form-control" name="username" id="phone" data-inputmask="'mask': '+99-999-9999-9999'" >
                         <input type="password" placeholder="Password" class="form-control" name="password" >
-                        <button class="btn btn-primary" type="submit">Register Now</button>
+                        <button class="btn btn-primary" type="submit">Sign In</button>
                         <div>Sign up already? <a href="{{route('signup')}}"> SignUp</a></div>
                         <div>Forget Password? <a href="{{route('resetpw')}}"> Reset Password</a></div>
                     </form>

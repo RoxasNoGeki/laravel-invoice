@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\rein;
+use App\Models\Template;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Auth;
@@ -16,13 +17,7 @@ class DashboardController extends Controller
         return view('rein.pages.changepw');
     }
 
-    public function invoice(){
-        return view('rein.pages.dashboard.invoice');
-    }
 
-    public function form(){
-        return view('rein.pages.dashboard.form');
-    }
 
     public function advance(){
         return view('rein.pages.dashboard.advance');

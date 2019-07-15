@@ -62,7 +62,7 @@
                             </li>
                             <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="{{route('form')}}">General Form</a></li>
+
                                     <li><a href="{{route('advance')}}">Advanced Components</a></li>
                                 </ul>
                             </li>
@@ -75,7 +75,7 @@
                             <li><a><i class="fa fa-desktop"></i> UI Elements <span
                                         class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="{{route('invoice')}}">Invoice</a></li>
+                                    <li><a href="{{route('invoice.index')}}">Invoice</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -178,6 +178,10 @@
 <script src="{{url('/vendors/jszip/dist/jszip.min.js')}}"></script>
 <script src="{{url('/vendors/pdfmake/build/pdfmake.min.js')}}"></script>
 <script src="{{url('/vendors/pdfmake/build/vfs_fonts.js')}}"></script>
+<!-- jQuery Smart Wizard -->
+<script src="{{url('/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js')}}"></script>
+
+
 
 
 <!-- Custom Theme Scripts -->
