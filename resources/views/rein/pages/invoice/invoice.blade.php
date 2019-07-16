@@ -48,12 +48,13 @@
                         <div class="x_content">
 
                             <section class="content invoice">
+                                {{$data}}
                                 <!-- title row -->
                                 <div class="row">
                                     <div class="col-xs-12 invoice-header">
                                         <h1>
                                             <i class="fa fa-globe"></i> Invoice.
-                                            <small class="pull-right">Date: 16/08/2016</small>
+                                            <small class="pull-right">Date: {{($data->issued_at)->toDateString()}}</small>
                                         </h1>
                                     </div>
                                     <!-- /.col -->
@@ -63,34 +64,32 @@
                                     <div class="col-sm-4 invoice-col">
                                         From
                                         <address>
-                                            <strong>Iron Admin, Inc.</strong>
-                                            <br>795 Freedom Ave, Suite 600
-                                            <br>New York, CA 94107
-                                            <br>Phone: 1 (804) 123-9876
-                                            <br>Email: ironadmin.com
+                                            <strong>{{$data->issuer['user_firstname']}}</strong>
+                                            <br>{{$data->issuer['user_address']}}
+                                            <br>{{$data->issuer['user_phone']}}
+                                            <br>{{$data->issuer['user_email']}}
                                         </address>
                                     </div>
                                     <!-- /.col -->
                                     <div class="col-sm-4 invoice-col">
                                         To
                                         <address>
-                                            <strong>John Doe</strong>
-                                            <br>795 Freedom Ave, Suite 600
-                                            <br>New York, CA 94107
-                                            <br>Phone: 1 (804) 123-9876
-                                            <br>Email: jon@ironadmin.com
+                                            <strong>{{$data->billed_to['for_firstname']}}</strong>
+                                            <br>{{$data->billed_to['for_address']}}
+                                            <br>{{$data->billed_to['for_phone']}}
+                                            <br>{{$data->billed_to['for_email']}}
                                         </address>
                                     </div>
                                     <!-- /.col -->
                                     <div class="col-sm-4 invoice-col">
-                                        <b>Invoice #007612</b>
+                                        <b>Invoice #{{$data->id}}</b>
                                         <br>
                                         <br>
                                         <b>Order ID:</b> 4F3S8J
                                         <br>
                                         <b>Payment Due:</b> 2/22/2014
                                         <br>
-                                        <b>Account:</b> 968-34567
+                                        <b>Account:</b> {{$data->payment_option['account_number']}}
                                     </div>
                                     <!-- /.col -->
                                 </div>
@@ -110,35 +109,11 @@
                                             </tr>
                                             </thead>
                                             <tbody>
+                                            @foreach($data->lines as $dt=>$v)
                                             <tr>
-                                                <td>1</td>
-                                                <td>Call of Duty</td>
-                                                <td>455-981-221</td>
-                                                <td>El snort testosterone trophy driving gloves handsome gerry Richardson helvetica tousled street art master testosterone trophy driving gloves handsome gerry Richardson
-                                                </td>
-                                                <td>$64.50</td>
+                                                <td>{{$v}}</td>
                                             </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Need for Speed IV</td>
-                                                <td>247-925-726</td>
-                                                <td>Wes Anderson umami biodiesel</td>
-                                                <td>$50.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Monsters DVD</td>
-                                                <td>735-845-642</td>
-                                                <td>Terry Richardson helvetica tousled street art master, El snort testosterone trophy driving gloves handsome letterpress erry Richardson helvetica tousled</td>
-                                                <td>$10.70</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Grown Ups Blue Ray</td>
-                                                <td>422-568-642</td>
-                                                <td>Tousled lomo letterpress erry Richardson helvetica tousled street art master helvetica tousled street art master, El snort testosterone</td>
-                                                <td>$25.99</td>
-                                            </tr>
+                                            @endforeach
                                             </tbody>
                                         </table>
                                     </div>

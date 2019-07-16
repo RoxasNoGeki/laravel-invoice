@@ -1,6 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\rein;
+
+use App\Models\History;
+use App\Models\Template;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Auth;
@@ -8,29 +12,42 @@ use Exception;
 
 class InvoiceController extends Controller
 {
-    public function index(){
-        return view('rein.pages.invoice.index');
+    public function index()
+    {
+        $data = Template::where('user_id', Auth::user()->uuid);
+        $data = $data->with(['history'])->get();
+        return view('rein.pages.invoice.index', compact('data'));
     }
 
-    public function store(Request $request){
-        $test=$request->only(['due_months']);
+    public function setting()
+    {
+        $data = Template::where('user_id', Auth::user()->uuid)->firstorfail();
+        return view('rein.pages.invoice.form', compact('data'));
+    }
 
-        $data=[
+    public function create(Request $request)
+    {
+        $data = [
+            'no' => $request->only(['prefix_no'])['prefix_no'],
+            'issued_at' => Carbon::now(),
+            'due_at' => Carbon::tomorrow(),
+            'billed_to' => $request->only(['for_firstname','for_address','for_email','for_phone']),
             'issuer' => $request->only(['user_firstname','user_address','user_email','user_phone']),
-            'billed_to'=>$request->only(['for_firstname','for_address','for_email','for_phone']),
-            'payment_option'=> $request->only(['account_name','account_number']),
-            'payment_terms'=>$request->only(['penalty','due_days','due_months','notes']),
-            'prefix_no'=>Auth::user()->uuid,
-            'send_option'=> 'email',
-            'repeat_in_days'=>$request->only(['due_days'])['due_days'],
-            'repeat_in_months'=>$request->only(['due_months'])['due_months'],
-            'due_in_days'=>12,
-            'due_in_months'=>13,
-            'user_id'=>Auth::user()->uuid,
-            'layout'=>'test1'
+            'lines' => $request->only(['qty','product','disc','desc','price']),
+            'payment_option' => $request->only(['account_name','account_number']),
+            'payment_terms' => $request->only(['penalty','due_days','due_months','notes']),
+            'is_send' => 0
         ];
-        return $data;
-//        Template::create($data);
-
+        $invoice = History::create($data);
+        return redirect(route('invoice'));
+//        return $data;
     }
+
+    public function view($id){
+        $data=History::where('id',$id)->firstorfail();
+
+        return view('rein.pages.invoice.invoice',compact('data'));
+    }
+
+
 }

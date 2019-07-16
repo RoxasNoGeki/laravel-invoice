@@ -75,7 +75,8 @@
                             <li><a><i class="fa fa-desktop"></i> UI Elements <span
                                         class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="{{route('invoice.index')}}">Invoice</a></li>
+                                    <li><a href="{{route('invoice')}}">Invoice</a></li>
+                                    <li><a href="{{route('setting')}}">Setting</a> </li>
                                 </ul>
                             </li>
                         </ul>
