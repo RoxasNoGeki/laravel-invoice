@@ -54,7 +54,7 @@
 
                         <div class="x_content">
 
-                            <a href="{{route('invoice_setting')}}">
+                            <a href="{{route('template')}}">
                                 <button class="btn btn-primary">
                                     Generate Invoice
                                 </button>
@@ -69,10 +69,7 @@
                                         <th class="column-title">Bill to Name</th>
                                         <th class="column-title no-link last"><span class="nobr">Action</span>
                                         </th>
-                                        <th class="bulk-actions" colspan="7">
-                                            <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span
-                                                    class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
-                                        </th>
+
                                     </tr>
                                     </thead>
 

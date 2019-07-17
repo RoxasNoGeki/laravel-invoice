@@ -80,7 +80,7 @@
 
 <!-- Featured#1
 ============================================= -->
-<section id="featured1" class="featured featured-1">
+<section id="tab1" class="featured featured-1">
     <div class="container">
         <div class="row">
             <!-- Featured Panel #1 -->
@@ -125,31 +125,162 @@
     </div><!-- .container end -->
 </section><!-- #featured1 end -->
 
-
-
-<!-- CTA#1
+<!-- Pricing#2
 ============================================= -->
-<section id="cta1" class="cta-1">
+<section id="pricing2" class="pricing pricing-2 bg-gray">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
                 <div class="heading text-center">
-                    <h2>Register Now for 30 days Free Trial</h2>
+                    <h2>Suitable Pricing</h2>
+                    <p>Lorem ipsum dolor amet, consectetur adipisicing elite,sede eiusmod tempor incididunt labore.</p>
+                </div>
+            </div><!-- .col-md-6 end -->
+        </div><!-- .row end -->
+        <div class="row">
+            <!-- Pricing Packge #1
+            ============================================= -->
+            <div class=" col-xs-12 col-sm-4 col-md-4 price-table">
+                <div class="panel">
+                    <!--  Packge heading  -->
+                    <div class="panel-heading text-center">
+                        <h4>Free</h4>
+                        <p>0<span>$</span></p>
+                    </div>
+                    <!--  Packge heading  -->
+                    <div class="panel-body text-center">
+                        <p>Class aptent taciti sociosqu ad litora torent per conubia nostra mauris.</p>
+                        <a class="btn btn-primary" href="#">Get started</a>
+                    </div>
+                    <!--  Packge Body  -->
+                </div>
+            </div>
+            <!-- Package End -->
+
+            <!-- Pricing Packge #2
+            ============================================= -->
+            <div class=" col-xs-12 col-sm-4 col-md-4 price-table active">
+                <div class="panel">
+                    <!--  Packge heading  -->
+                    <div class="panel-heading text-center">
+                        <h4>Basic</h4>
+                        <p>15<span>$</span></p>
+                    </div>
+                    <!--  Packge heading  -->
+                    <div class="panel-body text-center">
+                        <p>Class aptent taciti sociosqu ad litora torent per conubia nostra mauris.</p>
+                        <a class="btn btn-primary" href="#">Get started</a>
+                    </div>
+                    <!--  Packge Body  -->
+                </div>
+            </div>
+            <!-- Package End -->
+
+            <!-- Pricing Packge #3
+            ============================================= -->
+            <div class=" col-xs-12 col-sm-4 col-md-4 price-table">
+                <div class="panel">
+                    <!--  Packge heading  -->
+                    <div class="panel-heading text-center">
+                        <h4>Pro</h4>
+                        <p>30<span>$</span></p>
+                    </div>
+                    <!--  Packge heading  -->
+                    <div class="panel-body text-center">
+                        <p>Class aptent taciti sociosqu ad litora torent per conubia nostra mauris.</p>
+                        <a class="btn btn-primary" href="#">Get started</a>
+                    </div>
+                    <!--  Packge Body  -->
+                </div>
+            </div>
+            <!-- Package End -->
+
+        </div><!-- .row end -->
+    </div><!-- .container end -->
+</section><!-- #pricing2 end -->
+
+<!-- Subscription#2
+============================================= -->
+<section id="subscription2" class="sub-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+                <div class="heading text-center">
+                    <h2>Get Latest News & Updates</h2>
+                    <p>Lorem ipsum dolor amet, consectetur adipisicing elite,sede eiusmod tempor incididunt labore.</p>
                 </div>
             </div><!-- .col-md-6 end -->
         </div><!-- .row end -->
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="action-form">
-                    <form class="form-inline">
+                <div class="sub-form center-block">
+                    <form id="mailchimp" class="form-inline">
                         <input type="text" id="name" class="form-control" name="name" placeholder="Your name*" required />
                         <input type="email" id="email" class="form-control" name="email" placeholder="Your Email Address*" required/>
-                        <button class="btn btn-primary" type="submit">Register Now</button>
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
                     </form>
                 </div>
             </div><!-- .col-md-6 end -->
         </div><!-- .row end -->
     </div><!-- .container end -->
-</section><!-- #cta1 end -->
+</section><!-- #subscription2 end -->
+
+
+<!-- Footer#5
+============================================= -->
+<footer id="footer5" class="footer footer-5 text-center bg-gray pt-0 pb-0">
+    <div class="container">
+        <div class="row widget-boxes">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="widget-info-box">
+                    <i class="lnr lnr-home"></i>
+                    <h4>Address</h4>
+                    <p>1220 Petersham town, Wardell St.<br>Australia PA 6550.</p>
+                </div><!-- .widget-info-box end -->
+            </div><!-- .col-md-4 end -->
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="widget-info-box">
+                    <i class="lnr lnr-phone-handset"></i>
+                    <h4>Phone</h4>
+                    <p>+02 0111 99 2507</p>
+                </div><!-- .widget-info-box end -->
+            </div><!-- .col-md-4 end -->
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="widget-info-box">
+                    <i class="lnr lnr-envelope"></i>
+                    <h4>Email</h4>
+                    <p>Contact@zytheme.com</p>
+                </div><!-- .widget-info-box end -->
+            </div><!-- .col-md-4 end -->
+        </div><!-- .row end -->
+    </div><!-- .container end -->
+    <hr>
+    <div class="container footer-bar">
+        <div class="row">
+            <div class="col-xs-12 col-ms-12 col-md-6">
+                <div class="widget-copyright">
+                    <p>&copy; Zytheme 2016, All Rights Reserved.</p>
+                </div>
+            </div><!-- .col-md-6 end -->
+            <div class="col-xs-12 col-ms-12 col-md-6">
+                <div class="widget-social text-right">
+                    <a class="facebook" href="#">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="twitter" href="#" >
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="dribbble" href="#">
+                        <i class="fa fa-dribbble"></i>
+                    </a>
+                    <a class="vimeo" href="#">
+                        <i class="fa fa-vimeo"></i>
+                    </a>
+                </div>
+            </div><!-- .col-md-6 end -->
+        </div><!-- .row end -->
+    </div><!-- .container end -->
+</footer><!-- #footer5 end -->
+
 
 @endsection

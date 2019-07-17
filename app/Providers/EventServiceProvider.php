@@ -3,6 +3,9 @@
 namespace App\Providers;
 
 
+use App\Events\Subscription\SubscriptionCreating;
+use App\Events\Subscription\SubscriptionSaving;
+use App\Listeners\SetEndedAt;
 use Illuminate\Support\Facades\Event;
 use App\Events\User\Registering;
 use App\Events\User\Saving;
@@ -34,7 +37,13 @@ class EventServiceProvider extends ServiceProvider
             DenyIfNotVerified::class,
         ],
         Registering_Ref::class=>[
-            SetRefID::class
+            SetRefID::class,
+        ],
+        SubscriptionCreating::class =>[
+          SetUUID::class,
+        ],
+        SubscriptionSaving::class =>[
+          SetEndedAt::class,
         ],
 
     ];

@@ -5,6 +5,8 @@ namespace App\Models;
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // LARAVEL
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+use App\Events\Subscription\SubscriptionCreating;
+use App\Events\Subscription\SubscriptionSaving;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -24,7 +26,7 @@ class Subscription extends Model
 	public $timestamps  = true;
 	protected $fillable = [
 		'plan_id', 
-		'organization_id', 
+		'user_id',
 		'uuid', 
 		'is_auto_extend', 
 		'ended_at', 
@@ -45,6 +47,8 @@ class Subscription extends Model
 	];
 
 	protected $dispatchesEvents = [
+        'creating' 	=> SubscriptionCreating::class,
+        'saving'    => SubscriptionSaving::class,
 
     ];
 	/*=====================================

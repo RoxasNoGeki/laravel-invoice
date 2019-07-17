@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Plan;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -15,7 +17,8 @@ class HomeController extends Controller
     }
 
     public function signup(){
-        return view('rein.pages.signup');
+        $plans      = Plan::where('period', 1)->with(['price'])->get();
+        return view('rein.pages.signup',compact('plans'));
     }
 
     public function signin(){

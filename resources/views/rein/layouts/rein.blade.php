@@ -75,6 +75,12 @@
                             <a data-scroll="scrollTo" href="#tab1">why us</a>
                         </li>
                         <li>
+                            <a data-scroll="scrollTo" href="#pricing2">pricing</a>
+                        </li>
+                        <li>
+                            <a data-scroll="scrollTo" href="#subscription2">subscription</a>
+                        </li>
+                        <li>
                             <a href="{{route('signup')}}">Register Now</a>
                         </li>
                     </ul>

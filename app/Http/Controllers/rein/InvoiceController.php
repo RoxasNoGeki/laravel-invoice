@@ -19,9 +19,17 @@ class InvoiceController extends Controller
         return view('rein.pages.invoice.index', compact('data'));
     }
 
-    public function setting()
+    public function template(){
+        return view('rein.pages.invoice.template');
+    }
+
+    public function setting($id)
     {
-        $data = Template::where('user_id', Auth::user()->uuid)->firstorfail();
+        $query=['layout'=>$id ,
+                'user_id'=>Auth::user()->uuid
+        ];
+
+        $data=Template::where($query)->firstorfail();
         return view('rein.pages.invoice.form', compact('data'));
     }
 

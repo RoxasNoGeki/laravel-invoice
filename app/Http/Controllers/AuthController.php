@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Subscription;
 use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\Request;
@@ -25,6 +26,7 @@ class AuthController extends Controller
             $data = $request->only(['username', 'name', 'password']);
             $data['username'] = str_replace('-', '', $data['username']);
             $user = User::create($data);
+            $subs = Subscription::create(['plan_id'=>$request->get('plan_id'),'user_id'=> $user->uuid]);
         } catch (Exception $e) {
             return redirect(route('signup'))->withErrors(['username' => 'Username Has Been Taken']);
         }

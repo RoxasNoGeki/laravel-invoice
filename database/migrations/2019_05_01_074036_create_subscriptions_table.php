@@ -17,7 +17,7 @@ class CreateSubscriptionsTable extends Migration
             $table->bigIncrements('id');
             $table->char('uuid', 60)->index();
             $table->bigInteger('plan_id')->index();
-            $table->string('organization_id')->index();
+            $table->string('user_id')->index();
             $table->boolean('is_auto_extend')->default(1);
             $table->datetime('ended_at')->nullable();
             $table->timestamps();

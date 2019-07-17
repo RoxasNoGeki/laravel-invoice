@@ -72,11 +72,17 @@
                                     <li><a href="{{route('Dtables')}}">Table Dynamic</a></li>
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-desktop"></i> UI Elements <span
+                            <li><a><i class="fa fa-desktop"></i> Invoice <span
                                         class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="{{route('invoice')}}">Invoice</a></li>
                                     <li><a href="{{route('setting')}}">Setting</a> </li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-briefcase"></i> Subscription <span
+                                        class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="{{route('subscription.index')}}">Subscription</a></li>
                                 </ul>
                             </li>
                         </ul>
