@@ -66,7 +66,9 @@
                                     <tr class="headings">
                                         <th class="column-title">Template ID</th>
                                         <th class="column-title">Invoice Date</th>
+                                        <th class="column-title">Invoice Due Date</th>
                                         <th class="column-title">Bill to Name</th>
+                                        <th class="column-title">Notes</th>
                                         <th class="column-title no-link last"><span class="nobr">Action</span>
                                         </th>
 
@@ -79,7 +81,9 @@
                                             <tr class="even pointer">
                                                 <td class=" ">{{$v->history[$i]->id}}</td>
                                                 <td class=" ">{{$v->history[$i]->issued_at}} </td>
-                                                <td class=" ">{{$v->history[$i]->billed_to['for_firstname']}}</td>
+                                                <td class=" ">{{$v->history[$i]->due_at}}</td>
+                                                <td class=" ">{{$v->history[$i]->billed_to['for_name'][0]}}</td>
+                                                <td class=" ">{{$v->history[$i]->payment_terms['notes']}}</td>
                                                 <td class=" last"><a href="{{route('view',['id'=>$v->history[$i]->id])}}">View</a>
                                                 </td>
                                             </tr>

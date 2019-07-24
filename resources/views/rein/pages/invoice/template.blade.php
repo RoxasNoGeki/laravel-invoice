@@ -65,12 +65,20 @@
 
                                     <tbody>
                                     <tr>
-                                    <td class=" ">test1</td>
-                                    <td class=" last"><a href="{{route('invoice_setting',['id'=>'test1'])}}">View</a>
-                                    </tr>
+                                        <td class=" ">DEMO</td>
+                                        <td class=" last"><a href="{{route('invoice_setting',['id'=>'12'])}}">View</a>
+                                           </tr>
                                     <tr>
                                         <td class=" ">DEMO</td>
-                                        <td class=" last"><a href="{{route('invoice_setting',['id'=>'DEMO'])}}">View</a>
+                                        <td class=" last"><a href="{{route('invoice_setting',['id'=>'17'])}}">View</a>
+                                       </tr>
+                                    <tr>
+                                        <td class=" ">DEMO</td>
+                                        <td class=" last"><a href="{{route('invoice_setting',['id'=>'18'])}}">View</a>
+                                     </tr>
+                                    <tr>
+                                        <td class=" ">DEMO</td>
+                                       <td class=" last"><a href="{{route('invoice_setting',['id'=>'19'])}}">View</a>
                                     </tr>
                                     </tbody>
                                 </table>

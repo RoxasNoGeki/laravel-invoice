@@ -18,20 +18,21 @@ class CreateInvoiceTemplateTable extends Migration
 
             $table->text('issuer');
             $table->text('billed_to');
-            $table->text('lines');
+            $table->text('lines')->nullable();
             $table->char('prefix_no',60)->index();
             $table->text('payment_option');
             $table->string('send_option');
             $table->text('payment_terms');
 
-            $table->integer('repeat_in_days')->default('0');
-            $table->integer('repeat_in_months')->default('0');
-            $table->integer('due_in_days')->default('0');
-            $table->integer('due_in_months')->default('0');
+            $table->integer('repeat_in_days')->nullable();
+            $table->integer('repeat_in_months')->nullable();
+            $table->integer('due_in_days')->nullable();
+            $table->integer('due_in_months')->nullable();
 
             $table->string('user_id')->index();
             $table->string('layout');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

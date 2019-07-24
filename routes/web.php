@@ -31,7 +31,7 @@ Route::namespace('rein')->middleware('can:logged')->group( function () {
     Route::get('/invoice/setting/{id}','InvoiceController@setting')->name('invoice_setting');
     Route::post('/creating_invoice','InvoiceController@create')->name('create_invoice');
     Route::get('/invoice/{id}','InvoiceController@view')->name('view');
-
+    Route::get('/download','InvoiceController@generatePdf')->name('pdf');
 
     Route::resource('/subscription','SubscriptionController');
 

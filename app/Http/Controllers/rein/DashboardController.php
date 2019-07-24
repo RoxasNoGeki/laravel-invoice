@@ -22,24 +22,66 @@ class DashboardController extends Controller
     }
 
     public function store(Request $request){
-        $test=$request->only(['due_months']);
 
-        $data=[
-            'issuer' => $request->only(['user_firstname','user_address','user_email','user_phone']),
-            'billed_to'=>$request->only(['for_firstname','for_address','for_email','for_phone']),
-            'payment_option'=> $request->only(['account_name','account_number']),
-            'payment_terms'=>$request->only(['penalty','due_days','due_months','notes']),
-            'send_option'=> 'email',
-            'repeat_in_days'=>$request->only(['due_days'])['due_days'],
-            'repeat_in_months'=>$request->only(['due_months'])['due_months'],
-            'due_in_days'=>12,
-            'due_in_months'=>13,
-            'user_id'=>Auth::user()->uuid,
-            'layout'=>'DEMO'
-        ];
-//        return $data;
+
+        if($request->optionsRadios=='fixed'){
+            /*/
+            1 = daily/weekly
+            2 = monthly
+            /*/
+            if($request->sendOption==1){
+                $data=[
+                    'issuer' => $request->only(['user_name','user_address','user_email','user_phone']),
+                    'billed_to'=>$request->only(['for_name','for_address','for_email','for_phone']),
+                    'payment_option'=> $request->only(['payment_option','account_name','account_number']),
+                    'payment_terms'=>$request->only(['optionsRadios','sendOption','penalty','notes']),
+                    'send_option'=> $request->only(['send_option'])['send_option'],
+                    'repeat_in_days'=> $request->only(['day'])['day'],
+                    'user_id'=>Auth::user()->uuid,
+                    'layout'=>$request->only(['layout'])['layout']
+                ];
+            }else{
+                $data=[
+                    'issuer' => $request->only(['user_name','user_address','user_email','user_phone']),
+                    'billed_to'=>$request->only(['for_name','for_address','for_email','for_phone']),
+                    'payment_option'=> $request->only(['payment_option','account_name','account_number']),
+                    'payment_terms'=>$request->only(['optionsRadios','sendOption','penalty','notes']),
+                    'send_option'=> $request->only(['send_option'])['send_option'],
+                    'repeat_in_months'=> $request->only(['repeat'])['repeat'],
+                    'user_id'=>Auth::user()->uuid,
+                    'layout'=>$request->only(['layout'])['layout']
+                ];
+            }
+        }else if($request->optionsRadios=='nonfixed'){
+            if($request->sendOption==1){
+                $data=[
+                    'issuer' => $request->only(['user_name','user_address','user_email','user_phone']),
+                    'billed_to'=>$request->only(['for_name','for_address','for_email','for_phone']),
+                    'payment_option'=> $request->only(['payment_option','account_name','account_number']),
+                    'payment_terms'=>$request->only(['optionsRadios','sendOption','penalty','notes']),
+                    'send_option'=> $request->only(['send_option'])['send_option'],
+                    'due_in_days'=> $request->only(['due'])['due'],
+                    'user_id'=>Auth::user()->uuid,
+                    'layout'=>$request->only(['layout'])['layout']
+                ];
+            }else{
+                $data=[
+                    'issuer' => $request->only(['user_name','user_address','user_email','user_phone']),
+                    'billed_to'=>$request->only(['for_name','for_address','for_email','for_phone']),
+                    'payment_option'=> $request->only(['payment_option','account_name','account_number']),
+                    'payment_terms'=>$request->only(['optionsRadios','sendOption','penalty','notes']),
+                    'send_option'=> $request->only(['send_option'])['send_option'],
+                    'due_in_months'=> $request->only(['due'])['due'],
+                    'user_id'=>Auth::user()->uuid,
+                    'layout'=>$request->only(['layout'])['layout']
+                ];
+            }
+        }
+
         Template::create($data);
-
+        return redirect(route('invoice'));
+//        return $data;
+        //scheduler -> cron(untuk server)
     }
 
     public function advance(){

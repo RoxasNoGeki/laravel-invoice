@@ -13,7 +13,10 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        Commands\WordOfTheDay::class,
+        Commands\CreateInvoice::class,
+        Commands\SendInvoice::class,
+        Commands\Reset::class,
     ];
 
     /**
@@ -24,8 +27,14 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+        $schedule->command('word:day')
+            ->daily();
+        $schedule->command('invoice:create')
+            ->daily();
+        $schedule->command('invoice:send')
+            ->daily();
+        $schedule->command('invoice:reset')
+            ->daily();
     }
 
     /**

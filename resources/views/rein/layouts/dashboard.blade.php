@@ -76,7 +76,7 @@
                                         class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="{{route('invoice')}}">Invoice</a></li>
-                                    <li><a href="{{route('setting')}}">Setting</a> </li>
+                                    <li><a href="{{route('setting')}}">Setting</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-briefcase"></i> Subscription <span
@@ -116,7 +116,8 @@
                                     </a>
                                 </li>
                                 <li><a href="javascript:;">Help</a></li>
-                                <li><a href="{{route('logout')}}"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                                <li><a href="{{route('logout')}}"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -189,12 +190,9 @@
 <script src="{{url('/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js')}}"></script>
 
 
-
-
 <!-- Custom Theme Scripts -->
 <script src="{{url('/build/js/custom.min.js')}}"></script>
 
-
-
+@yield ('javascript')
 </body>
 </html>
