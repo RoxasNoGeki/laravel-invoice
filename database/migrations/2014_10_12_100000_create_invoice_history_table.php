@@ -16,8 +16,8 @@ class CreateInvoiceHistoryTable extends Migration
         Schema::create('Inv_history', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('no')->index();
-            $table->string('issued_at')->index();
-            $table->dateTime('due_at')->index();
+            $table->date('issued_at')->index();
+            $table->date('due_at')->index();
             $table->text('billed_to');
             $table->text('issuer');
             $table->text('lines');

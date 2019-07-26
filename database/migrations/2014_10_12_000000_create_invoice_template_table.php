@@ -24,7 +24,7 @@ class CreateInvoiceTemplateTable extends Migration
             $table->string('send_option');
             $table->text('payment_terms');
 
-            $table->integer('repeat_in_days')->nullable();
+            $table->string('repeat_in_days')->nullable();
             $table->integer('repeat_in_months')->nullable();
             $table->integer('due_in_days')->nullable();
             $table->integer('due_in_months')->nullable();
