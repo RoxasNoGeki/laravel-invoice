@@ -37,6 +37,20 @@ class InvoiceController extends Controller
         return view('rein.pages.invoice.form', compact('data'));
     }
 
+    public function edit($id){
+        $query = ['id' => $id,
+            'user_id' => Auth::user()->uuid
+        ];
+
+        $data = Template::where($query)->firstorfail();
+        return view('rein.pages.invoice.edit', compact('data'));
+    }
+
+    public function editing(Request $request){
+
+    }
+
+
     public function create(Request $request)
     {
         /*/

@@ -20,19 +20,10 @@
                         <div class="x_content">
                             <br/>
                             <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"
-                                  method="POST" action="{{route('store')}}">
+                                  method="POST" action="{{route('invoice_editing')}}">
                                 @csrf
+                                <input type="hidden" name="prefix_no" value="{{$data->prefix_no}}">
                                 <div class="row">
-                                    <div class="form-group col-md-6 col-xs-12">
-                                        <label for="Penalty"
-                                               class="control-label col-md-2 col-sm-2 col-xs-12">Layout</label>
-                                        <div class="col-md-10 col-sm-10 col-xs-12">
-                                            <input id="layout" class="form-control" type="text"
-                                                   placeholder="Template Name"
-                                                   name="layout">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 col-xs-12"></div>
                                     <div class="col-md-6 col-xs-6">
                                         <h4>Issuer</h4>
                                         <p class="font-gray-dark">
@@ -40,7 +31,8 @@
                                         </p>
                                         <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_name" class="form-control has-feedback-left"
-                                                   id="User_FirstName" placeholder="Your Name">
+                                                   id="User_FirstName" value="{{$data->issuer['user_name']}}"
+                                                   placeholder="First Name">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -48,7 +40,7 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_address[]"
                                                    class="form-control has-feedback-left" id="User_Address"
-                                                   placeholder="Address">
+                                                   placeholder="Address" value="{{$data->issuer['user_address'][0]}}">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -56,28 +48,30 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_address[]"
                                                    class="form-control has-feedback-left" id="User_State"
-                                                   placeholder="State">
+                                                   placeholder="State" value="{{$data->issuer['user_address'][1]}}">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
 
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_address[]" class="form-control"
-                                                   id="User_PostalCode" placeholder="Postal Code">
+                                                   id="User_PostalCode" placeholder="Postal Code"
+                                                   value="{{$data->issuer['user_address'][2]}}">
                                             <span class="fa fa-user form-control-feedback right"
                                                   aria-hidden="true"></span>
                                         </div>
 
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_email" class="form-control has-feedback-left"
-                                                   id="User_Email" placeholder="Email">
+                                                   id="User_Email" placeholder="Email"
+                                                   value="{{$data->issuer['user_email']}}">
                                             <span class="fa fa-envelope form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
 
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_phone" class="form-control" id="User_Phone"
-                                                   placeholder="Phone">
+                                                   placeholder="Phone" value="{{$data->issuer['user_phone']}}">
                                             <span class="fa fa-phone form-control-feedback right"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -89,16 +83,16 @@
                                         </p>
                                         <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_name" class="form-control has-feedback-left"
-                                                   id="For_FirstName" placeholder="First Name">
+                                                   id="For_FirstName" placeholder="First Name"
+                                                   value="{{$data->billed_to['for_name']}}">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
 
-
                                         <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_address[]"
                                                    class="form-control has-feedback-left" id="For_Adress"
-                                                   placeholder="Address">
+                                                   placeholder="Address" value="{{$data->billed_to['for_address'][0]}}">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -106,28 +100,30 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_address[]"
                                                    class="form-control has-feedback-left" id="For_State"
-                                                   placeholder="State">
+                                                   placeholder="State" value="{{$data->billed_to['for_address'][1]}}">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
 
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_address[]" class="form-control"
-                                                   id="For_PostalCode" placeholder="Postal Code">
+                                                   id="For_PostalCode" placeholder="Postal Code"
+                                                   value="{{$data->billed_to['for_address'][2]}}">
                                             <span class="fa fa-user form-control-feedback right"
                                                   aria-hidden="true"></span>
                                         </div>
 
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_email" class="form-control has-feedback-left"
-                                                   id="For_Email" placeholder="Email">
+                                                   id="For_Email" placeholder="Email"
+                                                   value="{{$data->billed_to['for_email']}}">
                                             <span class="fa fa-envelope form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
 
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_phone" class="form-control" id="For_Phone"
-                                                   placeholder="Phone">
+                                                   placeholder="Phone" value="{{$data->billed_to['for_phone']}}">
                                             <span class="fa fa-phone form-control-feedback right"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -140,8 +136,7 @@
                                     <div class="col-md-6 col-xs-6">
                                         <h4>Invoice Setting</h4>
                                         <p class="font-gray-dark">
-                                            Set Where Should The Sender Send Their Bills Information To. And How Would
-                                            You Want The Invoice To Be Delivered.
+                                            Payment Setting...
                                         </p>
 
                                         <div class="form-group">
@@ -150,7 +145,8 @@
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input type="text" name="account_name" id="Account_Name"
-                                                       required="required" class="form-control col-md-7 col-xs-12">
+                                                       required="required" class="form-control col-md-7 col-xs-12"
+                                                       value="{{$data->payment_option['account_name']}}">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -159,7 +155,8 @@
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input type="text" name="account_number" id="Account_Number"
-                                                       required="required" class="form-control col-md-7 col-xs-12">
+                                                       required="required" class="form-control col-md-7 col-xs-12"
+                                                       value="{{$data->payment_option['account_number']}}">
                                             </div>
                                         </div>
 
@@ -176,12 +173,12 @@
                                     <div class="col-md-6 col-xs-6">
                                         <h4>Invoice Setting</h4>
                                         <p class="font-gray-dark">
-                                            For Further Information On How Your Invoice Are Being Sent Please Click <a
-                                                data-toggle="modal" data-target=".bs-example-modal-lg"
-                                                style="color: red">HERE</a>
+                                            For Further Information On How Your Invoice Are Being Sent Please Click
+                                            <a data-toggle="modal" data-target=".bs-example-modal-lg"
+                                               style="color: red">HERE</a>
                                         </p>
 
-                                        {{--                                         Large modal --}}
+                                        {{--                                       Large Modal--}}
                                         <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
                                              aria-hidden="true">
                                             <div class="modal-dialog modal-lg">
@@ -250,7 +247,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        {{--                                        End Of Large Modal--}}
+                                        {{--                                        End Of Modal--}}
 
                                         <div class="col-md-6 col-xs-6">
 
@@ -282,29 +279,41 @@
                                                 In Percent</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input id="Penalty" class="form-control col-md-7 col-xs-12" type="text"
-                                                       name="penalty">
+                                                       name="penalty" value="{{$data->payment_terms['penalty']}}">
                                             </div>
                                         </div>
 
                                         <div class="form-group" id="dueIn" hidden="hidden">
-                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">Due In <span
+                                            <label class="control-label col-md-4 col-sm-4 col-xs-12">Due In<span
                                                     class="required">*</span>
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input id="due" name="due"
                                                        class="date-picker form-control col-md-7 col-xs-12"
-                                                       type="text">
+                                                       type="text"
+                                                       @if (!$data->due_in_days==null)
+                                                       value="{{$data->due_in_days}}"
+                                                       @elseif (!$data->due_in_months==null)
+                                                       value="{{$data->due_in_months}}"
+                                                    @endif
+
+                                                >
                                             </div>
+
                                         </div>
 
-                                        <div class="form-group" id="repeatIn" hidden="hidden">
+
+                                        <div class="form-group" id="repeatOn" hidden="hidden">
                                             <label class="control-label col-md-4 col-sm-4 col-xs-12">Repeat On <span
                                                     class="required">*</span>
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input id="Due_Months" name="repeat"
                                                        class="form-control col-md-7 col-xs-12"
-                                                       type="text">
+                                                       value="{{$data->repeat_in_months}}"
+                                                       type="text"
+
+                                                >
                                             </div>
                                         </div>
 
@@ -330,11 +339,11 @@
                                                 <textarea id="Notes" required="required" class="form-control"
                                                           name="notes" data-parsley-trigger="keyup"
                                                           data-parsley-minlength="0" data-parsley-maxlength="100"
-                                                          data-parsley-validation-threshold="10"></textarea>
+                                                          data-parsley-validation-threshold="10">{{$data->payment_terms['notes']}}</textarea>
                                             </div>
                                         </div>
                                     </div>
-
+                                    <input type="text" hidden="hidden" value="{{$data->layout}}" name="layout">
                                     <p>Notes : Daily and Weekly will be count by days and Monthly will be count by
                                         months</p>
                                 </div>
@@ -345,7 +354,7 @@
                                     <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                                         <button type="button" class="btn btn-primary">Cancel</button>
                                         <button class="btn btn-primary" type="reset">Reset</button>
-                                        <button type="submit" class="btn btn-success">Submit</button>
+                                        <button type="submit" class="btn btn-success">Save</button>
                                     </div>
                                 </div>
                             </form>
@@ -359,7 +368,22 @@
 @endsection
 @section('javascript')
     <script>
+        $(document).ready(function () {
+            inputset();
+            change();
+        });
 
+        function inputset() {
+
+            $("#sendOption").val({!! json_encode($data->payment_terms['sendOption']) !!});
+            $("#day").val({!! json_encode($data->repeat_in_days) !!})
+            if ({!! json_encode($data->payment_terms['optionsRadios']) !!}=='nonfixed'
+        )
+            {
+                document.getElementById('optionsRadios2').checked = true;
+
+            }
+        }
         function change() {
             if (document.getElementById('optionsRadios1').checked == true) {
                 if ($("#sendOption").val() == 1) {
