@@ -45,10 +45,6 @@ Route::namespace('rein')->middleware('can:logged')->group( function () {
 
 
 
-    Route::get('/advance','DashboardController@advance')->name('advance');
-    Route::post('/test','DashboardController@test')->name('test');
-    Route::get('/tables','DashboardController@tables')->name('tables');
-    Route::get('/Dtables','DashboardController@Dtables')->name('Dtables');
     Route::get('/setting','DashboardController@setting')->name('setting');
     Route::post('/savesetting','DashboardController@store')->name('store');
 

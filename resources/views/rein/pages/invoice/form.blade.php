@@ -265,7 +265,7 @@
                                         <div class="form-group">
                                             <label class="control-label col-md-4 col-sm-4 col-xs-12">Send Option</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <select class="form-control" name="sendOption" id="sendOption">
+                                                <select class="form-control" name="sendOption" id="sendOption" onchange="change()">
                                                     <option value="1">Daily / Weekly</option>
                                                     <option value="2">Monthly</option>
                                                 </select>

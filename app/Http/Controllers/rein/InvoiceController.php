@@ -22,7 +22,8 @@ class InvoiceController extends Controller
 
     public function template()
     {
-        return view('rein.pages.invoice.template');
+        $data=Template::where('user_id',Auth::user()->uuid)->get();
+        return view('rein.pages.invoice.template',compact('data'));
     }
 
     public function setting($id)

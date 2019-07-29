@@ -60,18 +60,6 @@
                                     <li><a href="{{route('dashboard')}}">Dashboard</a></li>
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-
-                                    <li><a href="{{route('advance')}}">Advanced Components</a></li>
-                                </ul>
-                            </li>
-                            <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="{{route('tables')}}">Tables</a></li>
-                                    <li><a href="{{route('Dtables')}}">Table Dynamic</a></li>
-                                </ul>
-                            </li>
                             <li><a><i class="fa fa-desktop"></i> Invoice <span
                                         class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">

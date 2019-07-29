@@ -84,22 +84,6 @@ class DashboardController extends Controller
         //scheduler -> cron(untuk server)
     }
 
-    public function advance(){
-        return view('rein.pages.dashboard.advance');
-    }
-
-    public function tables(){
-        return view('rein.pages.dashboard.tables');
-    }
-
-    public function Dtables(){
-        return view('rein.pages.dashboard.tables_dynamic');
-    }
-
-    public function test(Request $request){
-        $data=$request->only(['username']);
-        return str_replace('-','',$data);
-    }
 
     public function changingpw(Request $request){
         $data   = $request->only(['password']);

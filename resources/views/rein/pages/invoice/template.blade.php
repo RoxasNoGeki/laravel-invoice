@@ -64,22 +64,14 @@
                                     </thead>
 
                                     <tbody>
-                                    <tr>
-                                        <td class=" ">DEMO</td>
-                                        <td class=" last"><a href="{{route('invoice_setting',['id'=>'12'])}}">View</a>
-                                           </tr>
-                                    <tr>
-                                        <td class=" ">DEMO</td>
-                                        <td class=" last"><a href="{{route('invoice_setting',['id'=>'17'])}}">View</a>
-                                       </tr>
-                                    <tr>
-                                        <td class=" ">DEMO</td>
-                                        <td class=" last"><a href="{{route('invoice_setting',['id'=>'18'])}}">View</a>
-                                     </tr>
-                                    <tr>
-                                        <td class=" ">DEMO</td>
-                                       <td class=" last"><a href="{{route('invoice_setting',['id'=>'19'])}}">View</a>
-                                    </tr>
+
+                                    @foreach ($data as $dt)
+                                        <tr>
+                                            <td class=" ">{{$dt->layout}}</td>
+                                            <td class=" last"><a href="{{route('invoice_setting',['id'=>$dt->id])}}">View</a>
+                                        </tr>
+                                    @endforeach
+
                                     </tbody>
                                 </table>
                             </div>
