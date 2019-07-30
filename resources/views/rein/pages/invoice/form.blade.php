@@ -31,7 +31,7 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_name" class="form-control has-feedback-left"
                                                    id="User_FirstName" value="{{$data->issuer['user_name']}}"
-                                                   placeholder="First Name">
+                                                   placeholder="First Name" required="required">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -39,7 +39,7 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_address[]"
                                                    class="form-control has-feedback-left" id="User_Address"
-                                                   placeholder="Address" value="{{$data->issuer['user_address'][0]}}">
+                                                   placeholder="Address" value="{{$data->issuer['user_address'][0]}}" required="required">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -47,7 +47,7 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_address[]"
                                                    class="form-control has-feedback-left" id="User_State"
-                                                   placeholder="State" value="{{$data->issuer['user_address'][1]}}">
+                                                   placeholder="State" value="{{$data->issuer['user_address'][1]}}" required="required">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -55,7 +55,7 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_address[]" class="form-control"
                                                    id="User_PostalCode" placeholder="Postal Code"
-                                                   value="{{$data->issuer['user_address'][2]}}">
+                                                   value="{{$data->issuer['user_address'][2]}}" required="required">
                                             <span class="fa fa-user form-control-feedback right"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -63,14 +63,14 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_email" class="form-control has-feedback-left"
                                                    id="User_Email" placeholder="Email"
-                                                   value="{{$data->issuer['user_email']}}">
+                                                   value="{{$data->issuer['user_email']}}" required="required">
                                             <span class="fa fa-envelope form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
 
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_phone" class="form-control" id="User_Phone"
-                                                   placeholder="Phone" value="{{$data->issuer['user_phone']}}">
+                                                   placeholder="Phone" value="{{$data->issuer['user_phone']}}" required="required">
                                             <span class="fa fa-phone form-control-feedback right"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -83,7 +83,7 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_name" class="form-control has-feedback-left"
                                                    id="For_FirstName" placeholder="First Name"
-                                                   value="{{$data->billed_to['for_name']}}">
+                                                   value="{{$data->billed_to['for_name']}}" required="required">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -91,7 +91,7 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_address[]"
                                                    class="form-control has-feedback-left" id="For_Adress"
-                                                   placeholder="Address" value="{{$data->billed_to['for_address'][0]}}">
+                                                   placeholder="Address" value="{{$data->billed_to['for_address'][0]}}" required="required">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -99,7 +99,7 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_address[]"
                                                    class="form-control has-feedback-left" id="For_State"
-                                                   placeholder="State" value="{{$data->billed_to['for_address'][1]}}">
+                                                   placeholder="State" value="{{$data->billed_to['for_address'][1]}}" required="required">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -107,7 +107,7 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_address[]" class="form-control"
                                                    id="For_PostalCode" placeholder="Postal Code"
-                                                   value="{{$data->billed_to['for_address'][2]}}">
+                                                   value="{{$data->billed_to['for_address'][2]}}" required="required">
                                             <span class="fa fa-user form-control-feedback right"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -115,14 +115,14 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_email" class="form-control has-feedback-left"
                                                    id="For_Email" placeholder="Email"
-                                                   value="{{$data->billed_to['for_email']}}">
+                                                   value="{{$data->billed_to['for_email']}}" required="required">
                                             <span class="fa fa-envelope form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
 
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_phone" class="form-control" id="For_Phone"
-                                                   placeholder="Phone" value="{{$data->billed_to['for_phone']}}">
+                                                   placeholder="Phone" value="{{$data->billed_to['for_phone']}}" required="required">
                                             <span class="fa fa-phone form-control-feedback right"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -145,7 +145,7 @@
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input type="text" name="account_name" id="Account_Name"
                                                        required="required" class="form-control col-md-7 col-xs-12"
-                                                       value="{{$data->payment_option['account_name']}}">
+                                                       value="{{$data->payment_option['account_name']}}" >
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -155,7 +155,7 @@
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input type="text" name="account_number" id="Account_Number"
                                                        required="required" class="form-control col-md-7 col-xs-12"
-                                                       value="{{$data->payment_option['account_number']}}">
+                                                       value="{{$data->payment_option['account_number']}}" >
                                             </div>
                                         </div>
 
@@ -278,7 +278,7 @@
                                                 In Percent</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input id="Penalty" class="form-control col-md-7 col-xs-12" type="text"
-                                                       name="penalty" value="{{$data->payment_terms['penalty']}}">
+                                                       name="penalty" value="{{$data->payment_terms['penalty']}}" required="required">
                                             </div>
                                         </div>
 
@@ -335,7 +335,7 @@
                                         <div class="form-group">
                                             <label class="control-label col-md-4 col-sm-4 col-xs-12">Notes :</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <textarea id="Notes" required="required" class="form-control"
+                                                <textarea id="Notes"  class="form-control"
                                                           name="notes" data-parsley-trigger="keyup"
                                                           data-parsley-minlength="0" data-parsley-maxlength="100"
                                                           data-parsley-validation-threshold="10">{{$data->payment_terms['notes']}}</textarea>

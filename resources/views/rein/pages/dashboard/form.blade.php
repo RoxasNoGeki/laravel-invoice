@@ -29,7 +29,7 @@
                                         <div class="col-md-10 col-sm-10 col-xs-12">
                                             <input id="layout" class="form-control" type="text"
                                                    placeholder="Template Name"
-                                                   name="layout">
+                                                   name="layout" required="required">
                                         </div>
                                     </div>
                                     <div class="col-md-12 col-xs-12"></div>
@@ -40,7 +40,7 @@
                                         </p>
                                         <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_name" class="form-control has-feedback-left"
-                                                   id="User_FirstName" placeholder="Your Name">
+                                                   id="User_FirstName" placeholder="Your Name" required="required">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -48,7 +48,7 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_address[]"
                                                    class="form-control has-feedback-left" id="User_Address"
-                                                   placeholder="Address">
+                                                   placeholder="Address" required="required">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -56,28 +56,28 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_address[]"
                                                    class="form-control has-feedback-left" id="User_State"
-                                                   placeholder="State">
+                                                   placeholder="State" required="required">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
 
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_address[]" class="form-control"
-                                                   id="User_PostalCode" placeholder="Postal Code">
+                                                   id="User_PostalCode" placeholder="Postal Code" required="required">
                                             <span class="fa fa-user form-control-feedback right"
                                                   aria-hidden="true"></span>
                                         </div>
 
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_email" class="form-control has-feedback-left"
-                                                   id="User_Email" placeholder="Email">
+                                                   id="User_Email" placeholder="Email" required="required">
                                             <span class="fa fa-envelope form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
 
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_phone" class="form-control" id="User_Phone"
-                                                   placeholder="Phone">
+                                                   placeholder="Phone" required="required">
                                             <span class="fa fa-phone form-control-feedback right"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -89,7 +89,7 @@
                                         </p>
                                         <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_name" class="form-control has-feedback-left"
-                                                   id="For_FirstName" placeholder="First Name">
+                                                   id="For_FirstName" placeholder="First Name" required="required">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -98,7 +98,7 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_address[]"
                                                    class="form-control has-feedback-left" id="For_Adress"
-                                                   placeholder="Address">
+                                                   placeholder="Address" required="required">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -106,28 +106,28 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_address[]"
                                                    class="form-control has-feedback-left" id="For_State"
-                                                   placeholder="State">
+                                                   placeholder="State" required="required">
                                             <span class="fa fa-user form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
 
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_address[]" class="form-control"
-                                                   id="For_PostalCode" placeholder="Postal Code">
+                                                   id="For_PostalCode" placeholder="Postal Code" required="required">
                                             <span class="fa fa-user form-control-feedback right"
                                                   aria-hidden="true"></span>
                                         </div>
 
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_email" class="form-control has-feedback-left"
-                                                   id="For_Email" placeholder="Email">
+                                                   id="For_Email" placeholder="Email" required="required">
                                             <span class="fa fa-envelope form-control-feedback left"
                                                   aria-hidden="true"></span>
                                         </div>
 
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="text" name="for_phone" class="form-control" id="For_Phone"
-                                                   placeholder="Phone">
+                                                   placeholder="Phone" required="required">
                                             <span class="fa fa-phone form-control-feedback right"
                                                   aria-hidden="true"></span>
                                         </div>
@@ -282,7 +282,7 @@
                                                 In Percent</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
                                                 <input id="Penalty" class="form-control col-md-7 col-xs-12" type="text"
-                                                       name="penalty">
+                                                       name="penalty" required="required">
                                             </div>
                                         </div>
 
@@ -327,7 +327,7 @@
                                         <div class="form-group">
                                             <label class="control-label col-md-4 col-sm-4 col-xs-12">Notes :</label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <textarea id="Notes" required="required" class="form-control"
+                                                <textarea id="Notes" class="form-control"
                                                           name="notes" data-parsley-trigger="keyup"
                                                           data-parsley-minlength="0" data-parsley-maxlength="100"
                                                           data-parsley-validation-threshold="10"></textarea>
