@@ -6,11 +6,51 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Auth;
 use Exception;
+use Carbon\Carbon;
+use Validator;
+
 
 class DashboardController extends Controller
 {
     public function index(){
-        return view('rein.pages.dashboard.index');
+        // $data['total_org'] = Organization::where('user_id', Auth::user()->uuid)->count();
+        $data['total_sub'] = Template::where('user_id', Auth::user()->uuid)->count();
+
+        $dt['persenan']  = $this->indicator($data);
+        $dt['step']      = $this->step();
+        $dt['title']     = 'Howdy, '.Auth::user()->name;
+        $dt['subtitle']  = 'Selamat datang di BASIL. Untuk memulai ikuti langkah berikut';
+
+        return view('rein.pages.dashboard.index',compact('dt'));
+//        return $data;
+    }
+
+    private function indicator($attr){
+        // $rules['total_org'] = ['min:1'];
+        $rules['total_sub'] = ['min:1'];
+        $total  = count($rules);
+        $complt = $total;
+
+//        $validator  = Validator::make($attr, $rules);
+//        if ($validator->fails()){
+//            $complt = $complt - count($validator->messages());
+//        }
+//        $percentage = floor(($complt / max($total, 1)) * 100);
+
+        if ($attr['total_sub']<1){
+            $complt = $complt - 1;
+            $percentage = 0;
+        }else{
+            $percentage=100;
+        }
+
+
+        return $percentage;
+    }
+
+    private function step(){
+        $dt[0]  = ['content' => 'Buat Template Invoice Anda', 'action' => route('setting')];
+        return $dt;
     }
 
     public function changepw(){

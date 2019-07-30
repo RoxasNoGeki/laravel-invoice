@@ -29,7 +29,7 @@
 
     <!-- Document Title
         ============================================= -->
-    <title>Interact | Multi-purpose Landing Page Html5 Template - SHARED ON THEMELOCK.COM</title>
+    <title>BASIL</title>
 </head>
 <body>
 <div class="preloader">

@@ -8,8 +8,7 @@
                 <div class="col-md-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Form Design
-                                <small>different form elements</small>
+                            <h2>Template Edit
                             </h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -22,13 +21,26 @@
                             <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"
                                   method="POST" action="{{route('invoice_editing')}}">
                                 @csrf
+                                <input type="hidden" name="_method" value="PATCH">
                                 <input type="hidden" name="prefix_no" value="{{$data->prefix_no}}">
                                 <div class="row">
+                                    <div class="form-group col-md-6 col-xs-12">
+                                        <label for="Penalty"
+                                               class="control-label col-md-2 col-sm-2 col-xs-12">Layout</label>
+                                        <div class="col-md-10 col-sm-10 col-xs-12">
+                                            <input id="layout" class="form-control" type="text"
+                                                   placeholder="Template Name" value="{{$data->layout}}"
+                                                   name="layout">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-xs-12"></div>
                                     <div class="col-md-6 col-xs-6">
+
                                         <h4>Issuer</h4>
                                         <p class="font-gray-dark">
                                             Information of invoice sender
                                         </p>
+
                                         <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
                                             <input type="text" name="user_name" class="form-control has-feedback-left"
                                                    id="User_FirstName" value="{{$data->issuer['user_name']}}"
@@ -343,7 +355,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <input type="text" hidden="hidden" value="{{$data->layout}}" name="layout">
+
                                     <p>Notes : Daily and Weekly will be count by days and Monthly will be count by
                                         months</p>
                                 </div>

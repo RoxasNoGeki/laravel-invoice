@@ -37,7 +37,7 @@
                                     @foreach ($data as $dt)
                                         <tr>
                                             <td class=" ">{{$dt->layout}}</td>
-                                            <td class=" last"><a href="{{route('invoice_setting',['id'=>$dt->id])}}">View</a>
+                                            <td class=" last"><a href="{{route('invoice_setting',['id'=>$dt->id])}}">Use</a>
                                             <td class=" last"><a href="{{route('invoice_edit',['id'=>$dt->id])}}">Edit</a> </td>
                                         </tr>
                                     @endforeach

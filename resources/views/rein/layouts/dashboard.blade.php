@@ -109,7 +109,7 @@
     <!-- footer content -->
         <footer>
             <div class="pull-right">
-                Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+                © BASIL 2019. All rights reserved.
             </div>
             <div class="clearfix"></div>
         </footer>
@@ -142,7 +142,7 @@
 
 
 <!-- Custom Theme Scripts -->
-<script src="{{url('/build/js/custom.js')}}"></script>
+<script src="{{url('/build/js/custom.min.js')}}"></script>
 
 @yield ('javascript')
 </body>
